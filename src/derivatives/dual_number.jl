@@ -18,5 +18,5 @@ promote_rule(::Type{DualNumber}, ::Type{<:Number}) = DualNumber
 epsilon = DualNumber(0,1)
 println("epsilon                     = ", epsilon)
 println("epsilon * epsilon           = ", epsilon * epsilon)
-println("1 / epsilon                 = ", 1/(1+epsilon))
+println("1 / (1+epsilon)             = ", 1/(1+epsilon))
 println("(1+2*epsilon)*(3-4*epsilon) = ", (1+2*epsilon)*(3-4*epsilon))
