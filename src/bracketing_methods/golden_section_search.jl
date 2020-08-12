@@ -1,12 +1,13 @@
 using Printf
 
 f_test(x) = x^2 - 3*x 
-function bisection_search(f, a, b, n) 
-    ρ = 1/2
-    d = ρ * b + (1 - ρ)*a 
+function golden_section_search(f, a, b, n) 
+    phi = (1+√5)/2
+    rho = phi-1
+    d = rho * b + (1 - rho)*a 
     yd = f(d)
     for i = 1 : n-1
-        c = ρ*a + (1 - ρ)*b 
+        c = rho*a + (1 - rho)*b 
         yc = f(c)
         if yc < yd
             b, d, yd = d, c, yc
@@ -15,7 +16,7 @@ function bisection_search(f, a, b, n)
         end
         @printf("%d %6.3f %6.3f %6.3f\n", i, a, b, abs(a-b))
     end
-    return a < b ? (a, b) : (b, a) 
+return a < b ? (a, b) : (b, a) 
 end
 
-bisection_search(f_test, -1, 2, 10)
+golden_section_search(f_test, -1, 2, 10)
