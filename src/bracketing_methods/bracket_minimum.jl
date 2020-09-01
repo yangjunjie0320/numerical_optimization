@@ -2,7 +2,7 @@ using Printf
 include("bracketing_optimizer.jl")
 
 f_test(x) = x^2 - 3*x 
-function bracket_minimum(opt::BracketingOptimizer, k::Real=2.0) 
+function bracket_minimum(opt::BracketingOptimizer; k::Real=2.0) 
     a, b = opt.a, opt.b
     s = b - a
     a, ya = a, opt.f(a)
@@ -28,6 +28,6 @@ end
 opt = BracketingOptimizer(f_test, 1.0, 1.02, 30)
 
 println("\nk = 1.0")
-bracket_minimum(opt, 1.0)
+bracket_minimum(opt; k=1.0)
 println("\nk = 2.0")
-bracket_minimum(opt, 2.0)
+bracket_minimum(opt; k=2.0)
