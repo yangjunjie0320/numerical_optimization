@@ -1,5 +1,5 @@
-struct Polynomial{R}
-    coeffs::Vector{R}
+struct Polynomial{Real}
+    coeffs::Vector{Real}
 end
 
 function (p::Polynomial)(x)
