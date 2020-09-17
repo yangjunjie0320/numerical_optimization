@@ -29,12 +29,6 @@ function fib(algo::Iterative, n::Integer)
     return curr
 end
 
-# From client's perpsective, it just needs to pass an algorithm
-# that is implemented for the `fib` function. 
-# function find_golden_ratio(n; algo = Memoized())
-#     return fib(algo, n) / fib(algo, n-1)
-# end
-
 # auto-selection
 using  Printf
 function fib(n)
