@@ -5,3 +5,16 @@ The course mostly followed the book of [Algorithms for Optimization by Mykel J. 
 Here is an intersting [video](https://www.youtube.com/watch?v=ofWy5kaZU3g) by one of the authors talking about how they wrote the book in a recent Julia confernece.
 
 For the details on the optimization algorithms, we will refer to [Numerical Optimization by Jorge Nocedal and Stephen J. Wright](https://link.springer.com/book/10.1007/978-0-387-40065-5)
+
+## `Julia` programming
+## Local Optimization
+- Derivatives and Gradients
+- Bracketing
+- First/second-Order optimization
+- Gradient free methods
+- Stochastic methods
+
+## Global Optimization
+## Sampling Plans
+## Surrogate Optimization
+## Expression Optimization
