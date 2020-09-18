@@ -17,7 +17,7 @@ function newtons_method(grad_f, hess_f, x; epsilon=1e-4, k_max=20)
         x += step_vec
         k += 1
         xs = [xs; (x)']
-        @printf("%4d % 6.2f % 6.2f % 10.4e\n", k, x[1], x[2], norm(step_vec))
+        @printf("%4d % 6.2f % 6.2f % 10.2e\n", k, x[1], x[2], norm(step_vec))
     end
     return xs
 end
